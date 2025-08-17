@@ -1,10 +1,10 @@
 # Data Analyst
 
 ### Education
-B.S. in Applied Mathematics, Minor in Statistics
+*B.S. in Applied Mathematics, Minor in Statistics
 
 ### Projects
-[Job Offer Comparison App](https://larem.shinyapps.io/ButMyIncome1/)
+* [Job Offer Comparison App](https://larem.shinyapps.io/ButMyIncome1/)
 
 ### Work Experience
 Statistician - Navy Contractor ESED, Secret Clearance
