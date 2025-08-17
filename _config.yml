@@ -1,9 +1,9 @@
 ###########
 # site.title, site.url, site.author.name
 
-title:   'Jekyll Minimal Theme'
+title:   'Anthony Cazares'
 author:
-  name:  'Jekyll Minimal Theme Team'
+  name:  
 
 ## note: 
 #  use site.path in your templates to make it work for both protocols e.g. http and https
