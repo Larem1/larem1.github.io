@@ -1,7 +1,7 @@
 # Data Analyst
 
 ### Education
-*B.S. in Applied Mathematics, Minor in Statistics
+* B.S. in Applied Mathematics, Minor in Statistics
 
 ### Projects
 * [Job Offer Comparison App](https://larem.shinyapps.io/ButMyIncome1/)
