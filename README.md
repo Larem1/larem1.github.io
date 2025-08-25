@@ -5,6 +5,7 @@
 
 ### Projects
 * [Job Offer Comparison App](https://larem.shinyapps.io/ButMyIncome1/)
+* [Clinical Tableau Overview](https://public.tableau.com/app/profile/anthony.cazares/viz/ClinicalData_17560805233380/Dashboard1)
 
 ### Work Experience
 #### Statistician - Navy Contractor ESED, Secret Clearance
