@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Cazares Aguiar - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f3f2ef;
+            color: #000000de;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 24px;
+            padding: 24px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.2);
+            padding: 24px;
+            height: fit-content;
+            position: sticky;
+            top: 24px;
+        }
+
+        .sidebar h2 {
+            color: #0a66c2;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .project-list {
+            list-style: none;
+        }
+
+        .project-item {
+            margin-bottom: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .project-item:hover {
+            background-color: #f3f2ef;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #0a66c2;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.2);
+            padding: 32px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .name {
+            font-size: 32px;
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: #0a66c2;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            color: #0a66c2;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0a66c2;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 4px;
+        }
+
+        .company {
+            color: #0a66c2;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 4px;
+            border-left: 3px solid #0a66c2;
+        }
+
+        .skill-category h4 {
+            color: #0a66c2;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 16px;
+            }
+            
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li class="project-item">
+                    <a href="#" class="project-link">Munitions Performance Analysis Pipeline</a>
+                    <p class="project-description">End-to-end statistical analysis pipeline using R and Python for Navy ammunition assessment with Bayesian modeling.</p>
+                </li>
+                <li class="project-item">
+                    <a href="#" class="project-link">Computer Vision Video Analysis Tool</a>
+                    <p class="project-description">Python application using OpenCV and OCR for automated video content analysis and sample tracking.</p>
+                </li>
+                <li class="project-item">
+                    <a href="#" class="project-link">R Shiny Interactive Dashboard</a>
+                    <p class="project-description">Interactive web application for statistical analysis visualization and team collaboration.</p>
+                </li>
+                <li class="project-item">
+                    <a href="#" class="project-link">Meeting Transcription System</a>
+                    <p class="project-description">Speech-to-text application with speaker segmentation for automated meeting documentation.</p>
+                </li>
+                <li class="project-item">
+                    <a href="#" class="project-link">Custom Statistical Functions Library</a>
+                    <p class="project-description">Collection of R functions for streamlined statistical analysis and reproducible reporting.</p>
+                </li>
+                <li class="project-item">
+                    <a href="#" class="project-link">View All Projects on GitHub</a>
+                    <p class="project-description">See my complete portfolio of data science and statistical analysis projects.</p>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1 class="name">Anthony Cazares Aguiar</h1>
+                <p class="title">Statistician | Data Scientist | Machine Learning Engineer</p>
+                <div class="contact-info">
+                    <a href="mailto:anthonypicazares@gmail.com">anthonypicazares@gmail.com</a>
+                    <a href="https://linkedin.com/in/anthonycazares/">LinkedIn</a>
+                    <a href="https://github.com/anthonycazares">GitHub</a>
+                    <span>+1 (818) 855-6100</span>
+                </div>
+            </div>
+
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="description">
+                    Data scientist and statistician with 3.6 years of experience conducting advanced statistical analysis and machine learning for high-stakes Navy munitions assessment. 
+                    Expert in both frequentist and Bayesian methodologies, with proven ability to optimize testing protocols saving millions in operational costs. 
+                    Skilled in building end-to-end data pipelines, developing reproducible analytical workflows, and translating complex statistical models into actionable business insights for technical and non-technical stakeholders.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">Statistician / Data Scientist - Navy Contractor (Secret Clearance)</h3>
+                    <p class="company">Saalex Solutions – Fallbrook, CA</p>
+                    <p class="date">December 2021 – July 2025 (3.6 years)</p>
+                    <p class="description">
+                        • Conducted statistical hypothesis testing and regression analysis using R and Python to assess stockpile ammunition performance, potentially saving millions in operational costs through optimized testing protocols<br>
+                        • Applied both frequentist and Bayesian methodologies (MCMC via rjags/BUGS Gibbs sampling) to model munitions performance data and experimental outcomes in high-stakes environments<br>
+                        • Performed power analysis to determine optimal sample sizes for ammunition testing, reducing costs for rounds ranging from $2 to $80,000 each while maintaining statistical rigor<br>
+                        • Developed end-to-end data pipelines for extracting, validating, and processing large unstructured datasets from Navy repositories, ensuring high data integrity for model development<br>
+                        • Created reproducible analytical workflows and custom R functions, training 2 new statisticians and significantly improving team efficiency<br>
+                        • Built computer vision applications using Python/OpenCV for automated video analysis and meeting transcription tools with speech-to-text conversion<br>
+                        • Delivered data-driven presentations to government stakeholders, translating complex statistical models into actionable recommendations for Navy munitions handling<br>
+                        • Developed R Shiny applications for interactive data visualization and deployed secure AI solutions using Ollama LLM for sensitive data analysis<br>
+                        • Technologies: R (tidyverse, ggplot2, rjags, R Shiny), Python (pandas, scikit-learn, OpenCV), SQL, Excel VBA, BUGS/WinBUGS
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <h3 class="job-title">Mathematics Instructor</h3>
+                    <p class="company">Mathnasium – Burbank, CA</p>
+                    <p class="date">December 2019 – December 2021 (2 years)</p>
+                    <p class="description">
+                        • Tutored students in algebra, statistics, and foundational mathematics, improving academic comprehension and success rates<br>
+                        • Customized lesson plans and learning strategies to meet individual student goals and enhance long-term retention<br>
+                        • Developed critical thinking and problem-solving skills through collaborative learning approaches<br>
+                        • Strengthened communication abilities for explaining complex mathematical concepts to diverse audiences
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <h3 class="job-title">Bachelor of Science in Applied Mathematics, Minor in Statistics</h3>
+                    <p class="company">California Polytechnic State University – San Luis Obispo, CA</p>
+                    <p class="date">September 2015 – December 2019</p>
+                    <p class="description">
+                        Relevant Coursework: Statistical Modeling, Data Science, Machine Learning, Multivariate Regression<br>
+                        Tools: R, JMP, SAS, Tableau, Mathematica, MATLAB
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Statistical Programming</h4>
+                        <p class="skill-list">R (tidyverse, ggplot2, dplyr, rjags, brms, R Shiny), Python (pandas, NumPy, SciPy, scikit-learn, PyMC)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Machine Learning</h4>
+                        <p class="skill-list">GLMs, Bayesian Methods, Neural Networks, Computer Vision, Clustering (K-means, KNN), SVM, Random Forest, NLP</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Analysis & Visualization</h4>
+                        <p class="skill-list">Hypothesis Testing, Experimental Design, Power Analysis, Excel VBA, Tableau, Power BI, Plotly</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases & Tools</h4>
+                        <p class="skill-list">SQL, NoSQL, APIs, Git/GitHub, BUGS/WinBUGS, OpenCV, Visual Studio Code, Ollama LLM</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Statistical Methods</h4>
+                        <p class="skill-list">MCMC, Gibbs Sampling, ANOVA, Regression Analysis, Classification, Time Series, Bayesian Inference</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Specialized Tools</h4>
+                        <p class="skill-list">JMP, SAS, Mathematica, MATLAB, DarkNet, Speech-to-Text, OCR, Data Pipeline Automation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="education-item">
+                    <h3 class="job-title">Data Science Specialization</h3>
+                    <p class="company">Johns Hopkins University</p>
+                    <p class="date">Completed</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="job-title">Google Data Analytics Certificate</h3>
+                    <p class="company">Google</p>
+                    <p class="date">Completed</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
